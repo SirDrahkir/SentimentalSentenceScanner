@@ -1,0 +1,44 @@
+userSentence = input("Please enter grammatically correct sentences to determine the positivity of the sentences): ")
+sentenceSplit = userSentence.split()
+print(sentenceSplit)
+positiveWords = {'absolutely', 'abundant', 'accept', 'acclaimed', 'accomplishment', 'achievement', 'action', 'active', 'activist', 'acumen', 'adjust', 'admire', 'adopt', 'adorable', 'adored', 'adventure', 'affirmation', 'affirmative', 'affluent', 'agree', 'airy', 'alive', 'alliance', 'ally', 'alter', 'amaze', 'amity', 'animated', 'answer', 'appreciation', 'approve', 'aptitude', 'artistic', 'assertive', 'astonish', 'astounding', 'astute', 'attractive', 'authentic', 'basic', 'beaming', 'beautiful', 'believe', 'benefactor', 'benefit', 'bighearted', 'blessed', 'bliss', 'bloom', 'bountiful', 'bounty', 'brave', 'bright', 'brilliant', 'bubbly', 'bunch', 'burgeon', 'calm', 'care', 'celebrate', 'certain', 'change', 'character', 'charitable', 'charming', 'cheer', 'cherish', 'clarity', 'classy', 'clean', 'clever', 'closeness', 'commend', 'companionship', 'complete', 'comradeship', 'confident', 'connect', 'connected', 'constant', 'content', 'conviction', 'copious', 'core', 'coupled', 'courageous', 'creative', 'cuddle', 'cultivate', 'cure', 'curious', 'cute', 'dazzling', 'delight', 'direct', 'discover', 'distinguished', 'divine', 'donate', 'each', 'day', 'eager', 'earnest', 'easy', 'ecstasy', 'effervescent', 'efficient', 'effortless', 'electrifying', 'elegance', 'embrace', 'encompassing', 'encourage', 'endorse', 'energized', 'energy', 'enjoy', 'enormous', 'enthuse', 'enthusiastic', 'entirely', 'essence', 'established', 'esteem', 'everyday', 'everyone', 'excited', 'exciting', 'exhilarating', 'expand', 'explore', 'express', 'exquisite', 'exultant', 'faith', 'familiar', 'family', 'famous', 'feat', 'fit', 'flourish', 'fortunate', 'fortune', 'freedom', 'fresh', 'friendship', 'full', 'funny', 'gather', 'generous', 'genius', 'genuine', 'give', 'glad', 'glow', 'good', 'gorgeous', 'grace', 'graceful', 'gratitude', 'green', 'grin', 'group', 'grow', 'handsome', 'happy', 'harmony', 'healed', 'healing', 'healthful', 'healthy', 'heart', 'hearty', 'heavenly', 'helpful', 'here', 'highest', 'good', 'hold', 'holy', 'honest', 'honor', 'hug', 'affirm', 'allow', 'am', 'willing', 'am', 'can', 'choose', 'create', 'follow', 'know', 'know,', 'without', 'a', 'doubt', 'make', 'realize', 'take', 'action', 'trust', 'idea', 'ideal', 'imaginative', 'increase', 'incredible', 'independent', 'ingenious', 'innate', 'innovate', 'inspire', 'instantaneous', 'instinct', 'intellectual', 'intelligence', 'intuitive', 'inventive', 'joined', 'jovial', 'joy', 'jubilation', 'keen', 'key', 'kind', 'kiss', 'knowledge', 'laugh', 'leader', 'learn', 'legendary', 'let', 'go', 'light', 'lively','like' 'love', 'loveliness', 'lucidity', 'lucrative', 'luminous', 'maintain', 'marvelous', 'master', 'meaningful', 'meditate', 'mend', 'metamorphosis', 'mind-blowing', 'miracle', 'mission', 'modify', 'motivate', 'moving', 'natural', 'nature', 'nourish', 'nourished', 'novel', 'now', 'nurture', 'nutritious', 'one', 'open', 'openhanded', 'optimistic', 'paradise', 'party', 'peace', 'perfect', 'phenomenon', 'pleasure', 'plenteous', 'plentiful', 'plenty', 'plethora', 'poise', 'polish', 'popular', 'positive', 'powerful', 'prepared', 'pretty', 'principle', 'productive', 'project', 'prominent', 'prosperous', 'protect', 'proud', 'purpose', 'quest', 'quick', 'quiet', 'ready', 'recognize', 'refinement', 'refresh', 'rejoice', 'rejuvenate', 'relax', 'reliance', 'rely', 'remarkable', 'renew', 'renowned', 'replenish', 'resolution', 'resound', 'resources', 'respect', 'restore', 'revere', 'revolutionize', 'rewarding', 'rich', 'robust', 'rousing', 'safe', 'secure', 'see', 'sensation', 'serenity', 'shift', 'shine', 'show', 'silence', 'simple', 'sincerity', 'smart', 'smile', 'smooth', 'solution', 'soul', 'sparkling', 'spirit', 'spirited', 'spiritual', 'splendid', 'spontaneous', 'still', 'stir', 'strong', 'style', 'success', 'sunny', 'support', 'sure', 'surprise', 'sustain', 'synchronized', 'team', 'thankful', 'therapeutic', 'thorough', 'thrilled', 'thrive', 'today', 'together', 'tranquil', 'transform', 'triumph', 'trust', 'truth', 'unity', 'unusual', 'unwavering', 'upbeat', 'value', 'vary', 'venerate', 'venture', 'very', 'vibrant', 'victory', 'vigorous', 'vision', 'visualize', 'vital', 'vivacious', 'voyage', 'wealthy', 'welcome', 'well', 'whole', 'wholesome', 'willing', 'wonder', 'wonderful', 'wondrous', 'xanadu', 'yes', 'yippee', 'young', 'youth', 'youthful', 'zeal', 'zest', 'zing', 'zip'}
+
+negativeWords = {'abysmal', 'adverse', 'alarming', 'angry', 'annoy', 'anxious', 'apathy', 'appalling', 'atrocious', 'awful', 'bad', 'banal', 'barbed', 'belligerent', 'bemoan', 'beneath', 'boring', 'broken', 'callous', "can't", 'clumsy', 'coarse', 'cold', 'cold-hearted', 'collapse', 'confused', 'contradictory', 'contrary', 'corrosive', 'corrupt', 'crazy', 'creepy', 'criminal', 'cruel', 'cry', 'cutting', 'dead', 'decaying', 'damage', 'damaging', 'dastardly', 'deplorable', 'depressed', 'deprived', 'deformed', 'deny', 'despicable', 'detrimental', 'dirty', 'disease', 'disgusting', 'disheveled', 'dishonest', 'dishonorable', 'dismal', 'distress', "don't", 'dreadful', 'dreary', 'enraged', 'eroding', 'evil', 'fail', 'faulty', 'fear', 'feeble', 'fight', 'filthy', 'foul', 'frighten', 'frightful', 'gawky', 'ghastly', 'grave', 'greed', 'grim', 'grimace', 'gross', 'grotesque', 'gruesome', 'guilty', 'haggard', 'hard', 'hard-hearted', 'harmful', 'hate', 'hideous', 'homely', 'horrendous', 'horrible', 'hostile', 'hurt', 'hurtful', 'icky', 'ignore', 'ignorant', 'ill', 'immature', 'imperfect', 'impossible', 'inane', 'inelegant', 'infernal', 'injure', 'injurious', 'insane', 'insidious', 'insipid', 'jealous', 'junky', 'lose', 'lousy', 'lumpy', 'malicious', 'mean', 'menacing', 'messy', 'misshapen', 'missing', 'misunderstood', 'moan', 'moldy', 'monstrous', 'naive', 'nasty', 'naughty', 'negate', 'negative', 'never', 'no', 'nobody', 'nondescript', 'nonsense', 'not', 'noxious', 'objectionable', 'odious', 'offensive', 'old', 'oppressive', 'pain', 'perturb', 'pessimistic', 'petty', 'plain', 'poisonous', 'poor', 'prejudice', 'questionable', 'quirky', 'quit', 'reject', 'renege', 'repellant', 'reptilian', 'repulsive', 'repugnant', 'revenge', 'revolting', 'rocky', 'rotten', 'rude', 'ruthless', 'sad', 'savage', 'scare', 'scary', 'scream', 'severe', 'shoddy', 'shocking', 'sick', 'suck', 'sickening', 'sinister', 'slimy', 'smelly', 'sobbing', 'sorry', 'shit', 'spiteful', 'sticky', 'stinky', 'stormy', 'stressful', 'stuck', 'stupid', 'substandard', 'suspect', 'suspicious', 'tense', 'terrible', 'terrifying', 'threatening', 'ugly', 'undermine', 'unfair', 'unfavorable', 'unhappy', 'unhealthy', 'unjust', 'unlucky', 'unpleasant', 'upset', 'unsatisfactory', 'unsightly', 'untoward', 'unwanted', 'unwelcome', 'unwholesome', 'unwieldy', 'unwise', 'upset', 'vice', 'vicious', 'vile', 'villainous', 'vindictive', 'wary', 'weary', 'wicked', 'woeful', 'worthless', 'wound', 'yell', 'yucky', 'zero', 'aggravated', 'anger', 'apoplectic', 'avoid', 'beg', 'bored', 'collapse', 'competition', 'confused', 'corrupt', 'cry', 'damage', 'depressed', 'deprived', 'destroy', 'disease', 'divorce', 'don', 'enraged', 'famine', 'fear', 'fight', 'furious', 'gossip', 'greed', 'hate', 'hide', 'hunger', 'hurt', 'ignore', 'impossible', 'irate', 'jealousy', 'lack', 'lie', 'livid', 'mean', 'miser', 'mistrust', 'misunderstood', 'no', 'old', 'pain', 'pissed', 'revenge', 'ruthless', 'sabotage', 'savage', 'scared', 'seething', 'shouldn', 'sneaky', 'steal', 'stress', 'sucks', 'suppress', 'terrified', 'threat', 'unfair', 'unhappy', 'unhealthy', 'uninterested', 'unjust', 'unloved', 'unwanted', 'war', 'won', 'wouldn', 'yell'}
+
+positiveTracker = 0;
+negativeTracker = 0;
+Paragraph = 0;  
+Sentence = [];
+i = 0;
+for word in sentenceSplit:
+  if word in positiveWords:
+    print(word + ": positive") 
+    positiveTracker += 1
+  elif word in negativeWords:
+    print(word + ": negative")
+    negativeTracker += 1;
+  else:
+    print(word + ": neutral")
+    
+  Sentence.append(word)
+    
+  if '.' in word or '?' in word or '!' in word :
+    if negativeTracker==0 and positiveTracker==0:
+      print('  '+' '.join(Sentence) + ' -Neutral')
+    elif negativeTracker % 2 == 0:
+      print('  '+' '.join(Sentence) + ' -Positive')
+      Paragraph += 1;
+    else:
+      print('  '+' '.join(Sentence) + ' -Negative')
+      Paragraph -= 1;
+
+    Sentence = []
+    positiveTracker = 0;
+    negativeTracker = 0;
+if Paragraph == 0:
+  print('The Text is Neutral')
+elif Paragraph < 0:
+  print('The Text is Mostly Negative')
+else:
+  print('The Text is Mostly Positive')
+  
